@@ -20,7 +20,7 @@ exports.createPages = async ({ graphql, actions }) => {
       component: require.resolve(`./src/templates/chapter.js`),
       context: {
         ...node,
-        limit: current !== 0 ? current : 1,
+        current,
       },
     })
   })
