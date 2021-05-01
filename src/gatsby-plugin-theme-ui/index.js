@@ -1,17 +1,20 @@
+import "@fontsource/crimson-pro"
+import "@fontsource/crimson-pro/600.css"
+
 // example base theme from @theme-ui/presets
 const theme = {
   breakpoints: ["40em", "52em", "64em"],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
-    body: "system-ui, -apple-system, sans-serif",
-    heading: "inherit",
+    body: "Crimson Pro",
+    heading: "Crimson Pro",
     monospace: "Menlo, monospace",
   },
-  fontSizes: [16, 20, 24, 32, 48, 64, 96, 128],
+  fontSizes: [20, 24, 32, 40, 56, 80],
   fontWeights: {
     body: 400,
-    heading: 700,
-    bold: 700,
+    heading: 600,
+    bold: 600,
   },
   lineHeights: {
     body: 1.5,
@@ -65,7 +68,9 @@ const theme = {
       fontSize: 0,
     },
     p: {
+      fontSize: 0,
       textAlign: "justify",
+      textIndent: "1.8em",
     },
     pre: {
       fontFamily: "monospace",
