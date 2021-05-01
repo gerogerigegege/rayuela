@@ -11,7 +11,16 @@ module.exports = {
         path: `${__dirname}/src/capitulos`,
       },
     },
-    "gatsby-plugin-mdx",
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          default: require.resolve("./src/components/Layout.js"),
+        },
+      },
+    },
     "gatsby-plugin-theme-ui",
+    "gatsby-plugin-catch-links",
   ],
 }

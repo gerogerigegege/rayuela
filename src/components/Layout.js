@@ -30,13 +30,15 @@ export default function Layout({ location, children }) {
           width: "100%",
         }}
       >
-        <Themed.p>{data.site.siteMetadata.title}</Themed.p>
-        <Themed.p>{location}</Themed.p>
+        <Themed.p sx={{ my: 0 }}>
+          <strong>{data.site.siteMetadata.title}</strong>
+        </Themed.p>
       </div>
       <div
         sx={{
           flex: "1 1 auto",
           p: 3,
+          width: "100%",
           maxWidth: "container",
           mx: "auto",
         }}
