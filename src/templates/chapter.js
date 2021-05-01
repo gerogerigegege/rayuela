@@ -35,7 +35,7 @@ function InfiniteScroll({ chapters, curPage }) {
     }
   }
   return (
-    <React.Fragment>
+    <div>
       <div className="chapter-list">
         {chapters.map(node => {
           return (
@@ -46,13 +46,13 @@ function InfiniteScroll({ chapters, curPage }) {
         })}
       </div>
       {loading && <h1>Loading ...</h1>}
-    </React.Fragment>
+    </div>
   )
 }
 
 export default function Chapter({ pageContext, data }) {
   return (
-    <Layout location={pageContext.frontmatter.capitulo}>
+    <Layout /*location={pageContext.frontmatter.capitulo}*/>
       <InfiniteScroll
         chapters={data.allMdx.nodes}
         curPage={pageContext.frontmatter.capitulo}
