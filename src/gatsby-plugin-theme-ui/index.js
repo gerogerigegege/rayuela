@@ -43,6 +43,14 @@ const theme = {
       lineHeight: "body",
       fontWeight: "body",
     },
+    a: {
+      color: "primary",
+      textDecoration: "none",
+      "&:hover": {
+        color: "secondary",
+      },
+      cursor: "pointer",
+    },
     h1: {
       variant: "text.heading",
       fontSize: 5,
