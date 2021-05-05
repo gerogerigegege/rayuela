@@ -24,6 +24,7 @@
     "gatsby-source-filesystem": "^3.4.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-intersection-observer": "^8.31.1",
     "theme-ui": "^0.7.5"
   },
   "devDependencies": {
