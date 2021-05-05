@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Themed } from "theme-ui"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 export default function Layout({ location, children }) {
   const data = useStaticQuery(graphql`
@@ -23,16 +23,18 @@ export default function Layout({ location, children }) {
       <div
         sx={{
           p: 3,
+          width: "100%",
           maxWidth: "container",
           mx: "auto",
-          display: "flex",
-          justifyContent: "space-between",
-          width: "100%",
+          position: "sticky",
+          top: 0,
+          bg: "#fffffff8",
+          boxShadow: theme => `inset 0 -1px 0 ${theme.colors.text}`,
         }}
       >
-        <Themed.p sx={{ my: 0 }}>
-          <strong>{data.site.siteMetadata.title}</strong>
-        </Themed.p>
+        <Themed.a as={Link} to="/">
+          <Themed.h6 sx={{ m: 0 }}>{data.site.siteMetadata.title}</Themed.h6>
+        </Themed.a>
       </div>
       <div
         sx={{
@@ -44,17 +46,6 @@ export default function Layout({ location, children }) {
         }}
       >
         {children}
-      </div>
-      <div
-        sx={{
-          p: 3,
-          maxWidth: "container",
-          mx: "auto",
-        }}
-      >
-        <Themed.p>
-          <small>{data.site.siteMetadata.title}</small>
-        </Themed.p>
       </div>
     </div>
   )
