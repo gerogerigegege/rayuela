@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Spinner, Themed } from "theme-ui"
+import { jsx, Spinner } from "theme-ui"
 import React, { useState, useEffect } from "react"
 import { navigate } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
