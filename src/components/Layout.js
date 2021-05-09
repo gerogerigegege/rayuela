@@ -3,8 +3,8 @@ import { jsx, Themed } from "theme-ui"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 export default function Layout({ location, children }) {
-  const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname === rootPath
+  // const rootPath = `${__PATH_PREFIX__}/`
+  // const isRootPath = location.pathname === rootPath
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -22,7 +22,8 @@ export default function Layout({ location, children }) {
         minHeight: "100vh",
       }}
     >
-      {!isRootPath && (
+      {
+        //!isRootPath &&
         <div
           sx={{
             p: 3,
@@ -39,7 +40,7 @@ export default function Layout({ location, children }) {
             <Themed.h6 sx={{ m: 0 }}>{data.site.siteMetadata.title}</Themed.h6>
           </Themed.a>
         </div>
-      )}
+      }
       <div
         sx={{
           flex: "1 1 auto",
