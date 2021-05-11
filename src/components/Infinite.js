@@ -32,7 +32,9 @@ export default function InfiniteScroll({ chapters, curPage }) {
         if (curPage < 56 && !loading) {
           setLoading(true)
           setTimeout(() => {
-            navigate("/capitulo/" + (curPage + 1))
+            navigate("/capitulo/" + (curPage + 1), {
+              state: { disableScrollUpdate: true },
+            })
           }, 800)
         }
       }
